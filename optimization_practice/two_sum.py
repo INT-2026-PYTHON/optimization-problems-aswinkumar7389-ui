@@ -99,7 +99,8 @@ def two_sum_brute(nums, target):
 # Optimized approach using a dictionary
 def two_sum_fast(nums, target):
     seen = {}  # value -> index
-    for i, x in enumerate(nums):
+    for i, x in range(len(nums)):
+        x=nums[i]
         complement = target - x
         if complement in seen:
             return (seen[complement], i)
